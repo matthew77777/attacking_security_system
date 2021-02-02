@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>攻撃型防犯システム</title>
+    <style>
+    body {
+      background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    }
+
+    div {
+      margin: 4px;
+    }
+  </style>
+
+  <body>
+    <div class="row">
+        <div class="col-5 col-md-5"><h1>攻撃型防犯システム</h1></div>
+        <div class="col-2 col-md-2"><a href="/logout/"><font color="#000060">ログアウト</a></div>
+    </div>
+<div class="col-4 col-md-4">
+  <a href="/system_start/"><font color="#0000ff">システム起動</a><br>
+  <a href="/system_stop/"><font color="#c86496">システム停止</a>
+</div>
+
+   <div class="col-4 col-md-4"><a href="tel:+81-xx-xxxx-xxxx"><font color="#007800"><p>王子警察署へ電話(xx-xxxx-xxxx)</p></a>
+        </div>
+    <div class="embed-responsive">
+        <img src="{{ url_for('video_feed') }}">
+    </div> 
+
+<p><font color="#000000">カメラの向き</p>
+   <div class="row">
+        <div class="col-3 col-lg-3"><a class="btn btn-primary" href="/clock" role="button">カメラ左回転</a></div>
+        <div class="col-3 col-lg-3"><a class="btn btn-primary" href="/anticlock" role="button">カメラ右回転</a></div>
+ </div> 
+  <br>
+  <br>
+<p><font color="#000000">攻撃選択</p>
+    <div class="row">
+        <div class="col-3 col-md-3"><a class="btn btn-primary" href="/forward" role="button">発射</a></div>
+    　  <div class="col-3 col-md-3"><a class="btn btn-primary" href="/speaker" role="button">警告音</a></div> 
+      </div>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-3 col-md-3"><a class="btn btn-primary" href="/buzzer_on" role="button">ブザー オン</a></div>
+    <div class="col-3 col-md-3"><a class="btn btn-primary" href="/buzzer_off" role="button">ブザー オフ</a></div>      
+  </div>
+<br>
+<br>
+  <div class="row">
+    <div class="col-3 col-md-3"><a class="btn btn-primary" href="/led_on" role="button">ライト オン</a></div>
+    <div class="col-3 col-md-3"><a class="btn btn-primary" href="/led_off" role="button">ライト オフ</a></div>      
+  </div>
+<br>
+<br>
+  <div class="row">
+    <div class="col-3 col-md-3"><a class="btn btn-primary" href="/gas_on" role="button">発煙オン</a></div>
+    <div class="col-3 col-md-3"><a class="btn btn-primary" href="/gas_off" role="button">発煙オフ</a></div>
+  </div>
+
+<br>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+</html>
